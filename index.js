@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 const PORT = 3000;
 const app = express();
 
-app.get("/scrape", async (req, res) => {
+app.get("/", async (req, res) => {
 	const targetUrl = "https://www.bloomberg.com/live/us"; // Using the URL from your logs
 	const findTimeout = 30000; // Max time (ms) to wait for the m3u8 link before giving up
 
