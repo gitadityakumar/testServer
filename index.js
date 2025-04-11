@@ -6,7 +6,7 @@ const app = express();
 
 app.get("/scrape", async (req, res) => {
 	const targetUrl = "https://www.bloomberg.com/live/us"; // Using the URL from your logs
-	const findTimeout = 10000; // Max time (ms) to wait for the m3u8 link before giving up
+	const findTimeout = 30000; // Max time (ms) to wait for the m3u8 link before giving up
 
 	async function findMinimalM3u8Link(url) {
 		if (!url) {
